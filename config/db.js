@@ -7,7 +7,7 @@ const connectDb = asynchandler(async (req, res) => {
         console.log(`connected : ${conn.connection.host}`);
 
     } catch (error) {
-        console.log("Error")
+        console.log(error)
         process.exit(1)
     }
 })

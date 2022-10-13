@@ -25,13 +25,20 @@ const companySchema = mongoose.Schema({
         min: 2,
         max: 50
      },
+     First_name:{
+          type : String,
+          required :[true,"Please enter your first name"]
+     },
+     Last_name:{
+      type : String,
+      required :[true,"Please enter your last name"]
+     },
     Name:{
       type : String,
       // trim : true,
-      required:[true,"Please enter company name"]
+      // required:[true,"Please enter company name"]
          
     },
-
     Contact: {
         type: Number,
         //trim:true,
@@ -40,7 +47,7 @@ const companySchema = mongoose.Schema({
     },
      About_company: {
         type:String,
-        required:[true,"Please fill this field"]
+      //   required:[true,"Please fill this field"]
        
      },
      details:{
@@ -50,7 +57,7 @@ const companySchema = mongoose.Schema({
      Location :{
         type : String,
       //   trim : true,
-        required:[true,"Please enter the loaction"]
+      //   required:[true,"Please enter the loaction"]
      },
      perks :{
         type : String,
@@ -59,10 +66,6 @@ const companySchema = mongoose.Schema({
      addditional_information:{
         type:String
      }
-
-     
-
-
 },{timestamps:true})
 
 companySchema.pre('save',async function(){

@@ -8,6 +8,12 @@ const getInternship = asynHandler(async(req,res)=>{
      res.status(200).json(internship)
 })
 
+const getComapnyInternship = asynHandler(async(req,res)=>{
+     const id = req.params.id;
+     const internship = await Internship.find({company_id : id})
+     res.status(200).json(internship)
+})
+
 
 const getStaticInternship = asynHandler(async(req,res)=>{
      const id = req.params.id;
@@ -38,5 +44,6 @@ module.exports = {
    updateInternship,
    deleteInternship,
    getInternship,
-   getStaticInternship
+   getStaticInternship,
+   getComapnyInternship
 }

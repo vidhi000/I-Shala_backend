@@ -13,6 +13,8 @@ app.use("/company",require("./routes/companyRoutes"))
 app.use("/internship",require("./routes/internshipRoutes"))
 app.use("/application",require("./routes/applicationRoutes"))
 app.use("/prefrence",require("./routes/prefrenceRoutes"))
+app.use("/employee",require("./routes/employeedetailsRoutes"))
+app.use("/orgdetail",require("./routes/orgdetailRoutes"))
 
 connectDb()
 

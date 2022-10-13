@@ -10,6 +10,12 @@ const signupEmployee = asyncHandler(async(req,res)=>{
 
 })
 
+// const getEmployeeDetails = asyncHandler(async(req,res)=>{
+//     const user = await Company.create(req.body)
+//     res.status(200).json(user)
+//     console.log(user)
+// })
+
 const loginEmployee = asyncHandler(async(req,res)=>{
     //    const user = await Company.findOne({Email, Password})  
       const {Email,Password} = req.body
@@ -35,7 +41,8 @@ const loginEmployee = asyncHandler(async(req,res)=>{
 
 module.exports = {
     signupEmployee,
-    loginEmployee
+    loginEmployee,
+  
 }
 
 

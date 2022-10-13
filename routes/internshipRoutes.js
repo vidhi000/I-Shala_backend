@@ -12,3 +12,4 @@ route.post('/:id',getComapnyInternship)
 
 module.exports = route
 
+ 

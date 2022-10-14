@@ -11,6 +11,9 @@ const internSchema = mongoose.Schema({
         type: String,
         required: [true, "Please enter this filed"],
     },
+    Internship_type:{
+           type : String
+    },
     Location: {
         type: String,
         required: [true, "Please enter location"]
@@ -65,7 +68,8 @@ const internSchema = mongoose.Schema({
     },
     islive:{
         type: Boolean,
-        required:[true,"Enter status of internship"]
+        // required:[true,"Enter status of internship"],
+        default : true
         
     }
 
